@@ -1,0 +1,29 @@
+ALGORITHM checkPoint
+VAR
+    nbr_chart:INTEGER;
+    nbr_word: INTEGER;
+    nbr_voel: INTEGER;
+    chart:STRING;
+    word_sum:INTEGER := 0
+BEGIN
+    Read(Chart)
+   
+   for i FROM 1 TO chart.length step DO 
+   nbr_word := nbr_word + i; 
+   END_FOR
+   Write("the number of the words in the phrase is: " + nbr_word) 
+
+
+  count :INTEGER:= 0;
+        for nbr_voel of chart
+    WHILE ( nbr_voel = ('a','e','i','u','o')) DO
+         nbr_voel:= nbr_voel+1;
+        count := count+1;
+    END_WHILE
+    Write("the number of voel is: " +  count)
+
+    for   nbr_chart of chart    
+     REPEAT
+    UNTIL ( nbr_chart = ".")
+    Write( nbr_chart)
+END
